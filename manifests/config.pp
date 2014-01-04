@@ -44,7 +44,7 @@
 # Copyright 2012 Super-Visions, unless otherwise noted.
 #
 class sudoers::config(
-  $sudoers_config_file = hiera('sudoers_config_file'),
+  $sudoers_config_file = hiera('sudoers_config_file', '/etc/sudoers'),
   $sudoers_rules       = hiera('sudoers_rules', {}),
 )
 {

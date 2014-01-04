@@ -27,7 +27,7 @@
 #
 # Copyright 2012 Super-Visions, unless otherwise noted.
 #
-class sudoers::package( $package_name = hiera('sudoers_package') )
+class sudoers::package( $package_name = hiera('sudoers_package', 'sudo') )
 {
   package { $package_name:
     ensure => installed,
